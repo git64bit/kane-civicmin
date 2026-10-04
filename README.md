@@ -25,9 +25,9 @@ Civicmin is intended for independent Owner Operators. The Kane deployment is the
 
 ## Current state
 
-**Status:** `v0.3.0` development
+**Status:** `v0.3.0` accepted — release pending
 
-`v0.2.0` was released as the first native Usermin shell after a complete install/render/remove/reinstall/remove acceptance cycle on Usermin 2.550. The `v0.3.0` read-only catalog path has now been validated on the Kane reference instance: Civicmin resolved the authenticated Usermin session through the existing AF_UNIX broker, received the stable Civic Participant identity, applied the existing curated discovery policy, and rendered only the discoverable `water-ants` / Publish File command. No command invocation was added.
+`v0.2.0` was released as the first native Usermin shell after a complete install/render/remove/reinstall/remove acceptance cycle on Usermin 2.550. `v0.3.0` has now passed its read-only catalog acceptance gate on the Kane reference instance: Civicmin resolved the authenticated Usermin session through the existing AF_UNIX broker, received the stable Civic Participant identity, rendered only the discoverable `water-ants` / Publish File command, rendered broker-resolved help for that command, and preserved curated discovery policy on a negative help test. No command invocation was added.
 
 The current Kane reference deployment uses Usermin 2.550 as the initial compatibility floor. Current upstream Usermin is also examined for forward compatibility.
 
@@ -159,7 +159,7 @@ side_effects=false
 
 There is no command invocation, form submission, upload, Orchestrator call, or external side effect in this milestone.
 
-Before tagging `v0.3.0`, one negative-path check remains: requesting help for a command that is not discoverable to the current Participant must be rejected by the broker and must not reveal that command's guidance.
+The negative discovery-policy test passed: `navy-roots` was rejected for the reference Participant with `status=rejected`, `remote_dispatch=false`, and `side_effects=false`, and no help guidance was revealed. `v0.3.0` is accepted.
 
 ## Future federation
 
