@@ -143,7 +143,7 @@ Current triage:
 
 ## Immediate work
 
-The active `v0.4.0` milestone begins with one bounded end-to-end local-stub form for `water-ants` / Publish File. Civicmin accepts uploaded bytes under the Participant process, requires explicit acknowledgement in the UI, and sends only those bytes through a hard-coded `water-ants` invocation frame to the existing local broker. It does not expose a generic invocation endpoint.
+The active `v0.4.0` milestone begins with one bounded end-to-end local-stub form for `water-ants` / Publish File. The live Kane reference test passed: Civicmin accepted uploaded bytes under the Participant process, required explicit acknowledgement in the UI, sent only those bytes through a hard-coded `water-ants` invocation frame to the existing local broker, and rendered the returned stub evidence. It does not expose a generic invocation endpoint.
 
 ```text
 Usermin login
@@ -157,7 +157,7 @@ remote_dispatch=false
 side_effects=false
 ```
 
-`v0.3.0` is released. In the current `v0.4.0` slice, only `water-ants` can be submitted. The handler hard-codes the command identity and accepted semantic binding, enforces the existing 262,144-byte payload ceiling, requires explicit participant acknowledgement, and rejects any response that reports remote dispatch or external side effects. The expected result remains the repository/local broker stub.
+`v0.3.0` is released. In the current `v0.4.0` slice, only `water-ants` can be submitted. The positive live path has passed on Usermin 2.550: the result rendered `status=stub`, fixed operation `publication.publish`, artifact SHA-256 and byte size, `remote_dispatch=Disabled`, and `External side effects=None`. The handler hard-codes the command identity and accepted semantic binding, enforces the existing 262,144-byte payload ceiling, requires explicit participant acknowledgement, and rejects any response that reports remote dispatch or external side effects.
 
 ## Future federation
 
