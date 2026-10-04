@@ -1,0 +1,7 @@
+name=Civicmin
+desc=Civicmin
+category=others
+usermin=1
+depends=2.550
+os_support=*-linux
+longdesc=Thin participant-facing Usermin client for Civic Infrastructure. Civicmin presents bounded local Civic actions without owning Civic authority or backend routing.

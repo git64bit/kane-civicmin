@@ -25,9 +25,9 @@ Civicmin is intended for independent Owner Operators. The Kane deployment is the
 
 ## Current state
 
-**Status:** pre-`v0.1.0`
+**Status:** `v0.2.0` development
 
-The repository is establishing its first accepted thin-client and release boundaries before implementation code is added.
+The thin-client and repository boundaries are established. The first native Usermin Civicmin shell is now being built. It remains read-only and does not call the Civic broker or Orchestrator.
 
 The current Kane reference deployment uses Usermin 2.550 as the initial compatibility floor. Current upstream Usermin is also examined for forward compatibility.
 
@@ -128,9 +128,21 @@ v1.0.0  stable thin-client boundary
 
 Milestones may be split or merged when implementation evidence requires it. Tags represent accepted states, not planned dates.
 
+## Capability triage
+
+Implementation does not widen scope merely because upstream Usermin/Webmin or Civic Infrastructure exposes additional capabilities.
+
+Useful discoveries outside the active milestone may be noted briefly here with a priority of **triage** or **deferred**. They do not become implementation work until promoted into the active milestone.
+
+Current triage:
+
+- **triage:** evaluate stock Custom Commands `display_mode=1` as a reference/fallback surface during later command-catalog work;
+- **deferred:** Webmin-side Civicmin administration beyond what is required to install and configure the Usermin module;
+- **deferred:** enterprise message-broker/federation integration, which belongs below the stable local Civic boundary.
+
 ## Immediate work
 
-The next engineering milestone is `v0.2.0`: prove that Civicmin can exist as a small independent Usermin module using the upstream module and UI mechanisms.
+The active engineering milestone is `v0.2.0`: prove that Civicmin can exist as a small independent Usermin module using the upstream module and UI mechanisms.
 
 The first shell will remain read-only:
 

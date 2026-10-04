@@ -1,0 +1,10 @@
+index_title=Civicmin
+index_header=Civicmin shell status
+index_state=Module state
+index_readonly=Read-only shell; no Civic command catalog is active in this milestone.
+index_session=Usermin session
+index_dispatch=Remote dispatch
+index_dispatch_none=Disabled
+index_effects=External side effects
+index_effects_none=None
+index_return=Usermin home
