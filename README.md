@@ -27,7 +27,7 @@ Civicmin is intended for independent Owner Operators. The Kane deployment is the
 
 **Status:** `v0.3.0` development
 
-`v0.2.0` was released as the first native Usermin shell after a complete install/render/remove/reinstall/remove acceptance cycle on Usermin 2.550. Development has advanced to `v0.3.0`: a read-only, access-resolved Civic command catalog using the existing local Custom Command broker boundary. No command invocation is added.
+`v0.2.0` was released as the first native Usermin shell after a complete install/render/remove/reinstall/remove acceptance cycle on Usermin 2.550. The `v0.3.0` read-only catalog path has now been validated on the Kane reference instance: Civicmin resolved the authenticated Usermin session through the existing AF_UNIX broker, received the stable Civic Participant identity, applied the existing curated discovery policy, and rendered only the discoverable `water-ants` / Publish File command. No command invocation was added.
 
 The current Kane reference deployment uses Usermin 2.550 as the initial compatibility floor. Current upstream Usermin is also examined for forward compatibility.
 
@@ -143,7 +143,7 @@ Current triage:
 
 ## Immediate work
 
-The active `v0.3.0` milestone is deliberately limited to command discovery. Civicmin asks the existing local Custom Command broker for the commands discoverable to the current Participant and renders only the broker-returned catalog.
+The active `v0.3.0` milestone is deliberately limited to command discovery. The live Kane reference test passed: Civicmin asks the existing local Custom Command broker for the commands discoverable to the current Participant and renders only the broker-returned catalog.
 
 ```text
 Usermin login
