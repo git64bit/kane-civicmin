@@ -108,6 +108,7 @@ Accepted RFCs and BCPs are not silently rewritten when a later decision changes 
 
 - [RFC-0001 — Civicmin Scope and Thin-Client Boundary](rfcs/RFC-0001-civicmin-scope-and-thin-client-boundary.md)
 - [BCP-0001 — Release and Repository Practice](bcps/BCP-0001-release-and-repository-practice.md)
+- [BCP-0002 — Explicit Participant Confirmation and Voluntary Evidence](bcps/BCP-0002-explicit-participant-confirmation.md)
 
 ## Release path
 
@@ -143,7 +144,7 @@ Current triage:
 
 ## Immediate work
 
-The active `v0.4.0` milestone begins with one bounded end-to-end local-stub form for `water-ants` / Publish File. The positive live path passed. The explicit-confirmation negative path also rejected correctly, but the first test exposed Perl source path/line metadata in the participant-facing error. Civicmin now strips caught Perl source-location suffixes before rendering errors; this narrow UI-hardening change must be revalidated. It does not expose a generic invocation endpoint.
+The active `v0.4.0` milestone begins with one bounded end-to-end local-stub form for `water-ants` / Publish File. The positive live path passed. The explicit-confirmation negative path also passed after UI hardening: Civicmin now rejects an unchecked acknowledgement with a participant-safe error and no local source-path disclosure. It does not expose a generic invocation endpoint.
 
 ```text
 Usermin login
