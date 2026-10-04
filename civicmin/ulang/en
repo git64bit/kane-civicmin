@@ -1,10 +1,18 @@
 index_title=Civicmin
-index_header=Civicmin shell status
-index_state=Module state
-index_readonly=Read-only shell; no Civic command catalog is active in this milestone.
+index_header=Civicmin participant context
 index_session=Usermin session
+index_participant=Civic Participant
 index_dispatch=Remote dispatch
-index_dispatch_none=Disabled
+index_dispatch_none=Disabled for catalog discovery
 index_effects=External side effects
 index_effects_none=None
+
+catalog_header=Discoverable Civic commands
+catalog_state=Catalog state
+catalog_none=No Civic commands are currently discoverable for this Participant.
+catalog_lifecycle=Lifecycle
+catalog_available=Available to run
+catalog_yes=Yes
+catalog_no=No
+
 index_return=Usermin home

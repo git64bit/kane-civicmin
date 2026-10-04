@@ -25,9 +25,9 @@ Civicmin is intended for independent Owner Operators. The Kane deployment is the
 
 ## Current state
 
-**Status:** `v0.2.0` accepted — tag pending
+**Status:** `v0.3.0` development
 
-The thin-client and repository boundaries are established. The first native Usermin Civicmin shell was packaged, installed, rendered, removed, reinstalled, and removed again through normal Usermin module administration on the Kane Usermin 2.550 reference instance. Usermin discovered it under Tools, Authentic Theme rendered it correctly, and the page identified the authenticated Participant account `sase25sep26a`. The reference host is now back to its pre-install state. The shell is accepted for `v0.2.0` and remains read-only with no Civic broker or Orchestrator call.
+`v0.2.0` was released as the first native Usermin shell after a complete install/render/remove/reinstall/remove acceptance cycle on Usermin 2.550. Development has advanced to `v0.3.0`: a read-only, access-resolved Civic command catalog using the existing local Custom Command broker boundary. No command invocation is added.
 
 The current Kane reference deployment uses Usermin 2.550 as the initial compatibility floor. Current upstream Usermin is also examined for forward compatibility.
 
@@ -143,20 +143,21 @@ Current triage:
 
 ## Immediate work
 
-`v0.2.0` has passed its native-shell acceptance gate. Installation, module discovery, navigation, Authentic Theme rendering, authenticated Participant context, clean removal, reinstall, and final removal all passed on Usermin 2.550. The next implementation milestone is `v0.3.0`: a read-only Civic command catalog through the accepted local Civic boundary.
-
-The first shell will remain read-only:
+The active `v0.3.0` milestone is deliberately limited to command discovery. Civicmin asks the existing local Custom Command broker for the commands discoverable to the current Participant and renders only the broker-returned catalog.
 
 ```text
 Usermin login
-  -> Civicmin module
-  -> authenticated participant context
-  -> static/read-only Civicmin page
+  -> Civicmin
+  -> AF_UNIX Custom Command broker
+  -> SO_PEERCRED Participant resolution
+  -> curated discovery policy
+  -> read-only catalog
 
+remote_dispatch=false
 side_effects=false
 ```
 
-No Orchestrator dispatch is required for that milestone.
+There is no command invocation, form submission, upload, Orchestrator call, or external side effect in this milestone.
 
 ## Future federation
 
