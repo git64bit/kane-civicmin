@@ -25,9 +25,9 @@ Civicmin is intended for independent Owner Operators. The Kane deployment is the
 
 ## Current state
 
-**Status:** `v0.2.0` development
+**Status:** `v0.2.0` accepted — tag pending
 
-The thin-client and repository boundaries are established. The first native Usermin Civicmin shell has been packaged and installed successfully on the Kane Usermin 2.550 reference instance. Usermin discovered it as a normal module under Tools, Authentic Theme rendered it correctly, and the page identified the authenticated Participant account `sase25sep26a`. It remains read-only and does not call the Civic broker or Orchestrator.
+The thin-client and repository boundaries are established. The first native Usermin Civicmin shell was packaged, installed, rendered, removed, reinstalled, and removed again through normal Usermin module administration on the Kane Usermin 2.550 reference instance. Usermin discovered it under Tools, Authentic Theme rendered it correctly, and the page identified the authenticated Participant account `sase25sep26a`. The reference host is now back to its pre-install state. The shell is accepted for `v0.2.0` and remains read-only with no Civic broker or Orchestrator call.
 
 The current Kane reference deployment uses Usermin 2.550 as the initial compatibility floor. Current upstream Usermin is also examined for forward compatibility.
 
@@ -136,13 +136,14 @@ Useful discoveries outside the active milestone may be noted briefly here with a
 
 Current triage:
 
+- **triage:** dedicated Civicmin top-level Usermin category and future separation of participant-facing and administrative surfaces. Keep Civicmin under Tools while functionality is the active priority;
 - **triage:** evaluate stock Custom Commands `display_mode=1` as a reference/fallback surface during later command-catalog work;
 - **deferred:** Webmin-side Civicmin administration beyond what is required to install and configure the Usermin module;
 - **deferred:** enterprise message-broker/federation integration, which belongs below the stable local Civic boundary.
 
 ## Immediate work
 
-The active engineering milestone is `v0.2.0`: complete the native-shell acceptance gate. Installation, module discovery, navigation, Authentic Theme rendering, and authenticated Participant context have passed on Usermin 2.550. Clean removal and reinstall remain before tagging the milestone.
+`v0.2.0` has passed its native-shell acceptance gate. Installation, module discovery, navigation, Authentic Theme rendering, authenticated Participant context, clean removal, reinstall, and final removal all passed on Usermin 2.550. The next implementation milestone is `v0.3.0`: a read-only Civic command catalog through the accepted local Civic boundary.
 
 The first shell will remain read-only:
 
