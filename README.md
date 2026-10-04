@@ -25,9 +25,9 @@ Civicmin is intended for independent Owner Operators. The Kane deployment is the
 
 ## Current state
 
-**Status:** `v0.3.0` accepted — release pending
+**Status:** `v0.4.0` development
 
-`v0.2.0` was released as the first native Usermin shell after a complete install/render/remove/reinstall/remove acceptance cycle on Usermin 2.550. `v0.3.0` has now passed its read-only catalog acceptance gate on the Kane reference instance: Civicmin resolved the authenticated Usermin session through the existing AF_UNIX broker, received the stable Civic Participant identity, rendered only the discoverable `water-ants` / Publish File command, rendered broker-resolved help for that command, and preserved curated discovery policy on a negative help test. No command invocation was added.
+`v0.2.0` established the native Usermin shell and `v0.3.0` established the access-resolved read-only catalog/help path. Development has advanced to `v0.4.0`, beginning with one command-specific local-stub form for `water-ants` / Publish File. The form is deliberately not a generic form engine.
 
 The current Kane reference deployment uses Usermin 2.550 as the initial compatibility floor. Current upstream Usermin is also examined for forward compatibility.
 
@@ -143,7 +143,7 @@ Current triage:
 
 ## Immediate work
 
-The active `v0.3.0` milestone remains read-only. Catalog discovery and catalog-to-help navigation have both passed live validation on Usermin 2.550. Civicmin renders broker-resolved guidance for the discoverable command and returns cleanly to the catalog; no invocation path exists.
+The active `v0.4.0` milestone begins with one bounded end-to-end local-stub form for `water-ants` / Publish File. Civicmin accepts uploaded bytes under the Participant process, requires explicit acknowledgement in the UI, and sends only those bytes through a hard-coded `water-ants` invocation frame to the existing local broker. It does not expose a generic invocation endpoint.
 
 ```text
 Usermin login
@@ -157,9 +157,7 @@ remote_dispatch=false
 side_effects=false
 ```
 
-There is no command invocation, form submission, upload, Orchestrator call, or external side effect in this milestone.
-
-The negative discovery-policy test passed: `navy-roots` was rejected for the reference Participant with `status=rejected`, `remote_dispatch=false`, and `side_effects=false`, and no help guidance was revealed. `v0.3.0` is accepted.
+`v0.3.0` is released. In the current `v0.4.0` slice, only `water-ants` can be submitted. The handler hard-codes the command identity and accepted semantic binding, enforces the existing 262,144-byte payload ceiling, requires explicit participant acknowledgement, and rejects any response that reports remote dispatch or external side effects. The expected result remains the repository/local broker stub.
 
 ## Future federation
 

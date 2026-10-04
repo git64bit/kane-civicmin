@@ -1,6 +1,6 @@
 #!/usr/local/bin/perl
 # help.cgi
-# Read-only broker-resolved guidance for one discoverable Civic command.
+# Broker-resolved guidance for one discoverable Civic command.
 
 require './civicmin-lib.pl';
 require './civicmin-client.pl';
@@ -49,6 +49,12 @@ else {
 	print &ui_table_start($text{'help_guidance'}, undef, 1);
 	print &ui_table_row(undef, $body);
 	print &ui_table_end();
+
+	if ($codename eq "water-ants" && $result->{'available_to_run'}) {
+		print "<p>\n";
+		print &ui_form_start("water-ants.cgi", "get");
+		print &ui_form_end([ [ undef, $text{'help_continue'} ] ]);
+		}
 	}
 
 &ui_print_footer("index.cgi", $text{'help_return'},

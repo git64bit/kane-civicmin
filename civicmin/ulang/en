@@ -20,6 +20,26 @@ help_header=Command context
 help_command=Command
 help_guidance=Participant guidance
 help_invalid=Invalid Civic command identifier.
+help_continue=Continue to Publish File validation
 help_return=Civicmin catalog
+
+water_title=Publish File
+water_header=Publish File local validation
+water_file=File
+water_confirm=Confirmation
+water_confirm_text=I have reviewed the command guidance and want to validate this file.
+water_submit=Validate Publish File
+water_back=Command guidance
+water_result_title=Publish File Validation Result
+water_result_header=Local stub evidence
+water_result_file=Uploaded file
+water_result_status=Status
+water_result_operation=Fixed Civic operation
+water_result_media=Media type
+water_result_size=Size in bytes
+water_result_sha=SHA-256
+water_result_dispatch=Disabled
+water_result_effects=None
+water_again=Validate another file
 
 index_return=Usermin home
