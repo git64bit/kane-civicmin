@@ -27,7 +27,7 @@ Civicmin is intended for independent Owner Operators. The Kane deployment is the
 
 **Status:** `v0.2.0` development
 
-The thin-client and repository boundaries are established. The first native Usermin Civicmin shell is present in the repository and a standard Usermin module package has been constructed for installation testing. It remains read-only and does not call the Civic broker or Orchestrator.
+The thin-client and repository boundaries are established. The first native Usermin Civicmin shell has been packaged and installed successfully on the Kane Usermin 2.550 reference instance. Usermin discovered it as a normal module under Tools, Authentic Theme rendered it correctly, and the page identified the authenticated Participant account `sase25sep26a`. It remains read-only and does not call the Civic broker or Orchestrator.
 
 The current Kane reference deployment uses Usermin 2.550 as the initial compatibility floor. Current upstream Usermin is also examined for forward compatibility.
 
@@ -142,7 +142,7 @@ Current triage:
 
 ## Immediate work
 
-The active engineering milestone is `v0.2.0`: install the bounded shell on the Kane Usermin 2.550 reference instance and verify native module discovery, navigation, rendering, authenticated Unix-user context, and clean removal.
+The active engineering milestone is `v0.2.0`: complete the native-shell acceptance gate. Installation, module discovery, navigation, Authentic Theme rendering, and authenticated Participant context have passed on Usermin 2.550. Clean removal and reinstall remain before tagging the milestone.
 
 The first shell will remain read-only:
 
