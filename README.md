@@ -143,7 +143,7 @@ Current triage:
 
 ## Immediate work
 
-The active `v0.3.0` milestone remains read-only. Catalog discovery has passed live validation. The next bounded slice adds catalog-to-help navigation using the broker's existing `help` request; it does not add invocation.
+The active `v0.3.0` milestone remains read-only. Catalog discovery and catalog-to-help navigation have both passed live validation on Usermin 2.550. Civicmin renders broker-resolved guidance for the discoverable command and returns cleanly to the catalog; no invocation path exists.
 
 ```text
 Usermin login
@@ -158,6 +158,8 @@ side_effects=false
 ```
 
 There is no command invocation, form submission, upload, Orchestrator call, or external side effect in this milestone.
+
+Before tagging `v0.3.0`, one negative-path check remains: requesting help for a command that is not discoverable to the current Participant must be rejected by the broker and must not reveal that command's guidance.
 
 ## Future federation
 
