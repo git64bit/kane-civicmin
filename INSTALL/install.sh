@@ -16,9 +16,9 @@ MIN_USERMIN_VERSION="2.550"
 BROKER_SOCKET="/run/civic-orchestrator/custom-command.sock"
 BROKER_GROUP="civic-participants"
 
-# Immutable upstream repository-bootstrap script used for the v0.5.0 baseline.
-WEBMIN_SETUP_COMMIT="84ea802947aaf45b102424322f4cb9c2999410ef"
-WEBMIN_SETUP_URL="https://raw.githubusercontent.com/webmin/webmin/${WEBMIN_SETUP_COMMIT}/webmin-setup-repo.sh"
+# Follow the official upstream stable package channel. Civicmin pins only
+# Civicmin releases; upstream Webmin/Usermin versions are intentionally current.
+WEBMIN_SETUP_URL="https://raw.githubusercontent.com/webmin/webmin/master/webmin-setup-repo.sh"
 
 fail()
 {

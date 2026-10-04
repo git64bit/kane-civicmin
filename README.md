@@ -25,7 +25,7 @@ Civicmin is intended for independent Owner Operators. The Kane deployment is the
 
 ## Current state
 
-**Status:** `v0.5.0` development — portable Owner Operator packaging
+**Status:** `v0.5.0` accepted — release pending
 
 `v0.2.0` established the native Usermin shell, `v0.3.0` established the access-resolved read-only catalog/help path, and `v0.4.0` established the bounded `water-ants` / Publish File local-stub form. `v0.5.0` makes that accepted client installable as part of a portable Owner Operator node.
 
@@ -111,6 +111,7 @@ Accepted RFCs and BCPs are not silently rewritten when a later decision changes 
 - [BCP-0001 — Release and Repository Practice](bcps/BCP-0001-release-and-repository-practice.md)
 - [BCP-0002 — Explicit Participant Confirmation and Voluntary Evidence](bcps/BCP-0002-explicit-participant-confirmation.md)
 - [BCP-0003 — Portable Portal Installation Contract](bcps/BCP-0003-portable-portal-installation-contract.md)
+- [BCP-0004 — Upstream Component Versions](bcps/BCP-0004-upstream-component-versions.md)
 
 ## Release path
 
@@ -144,8 +145,8 @@ It is run as root, with no arguments, from a pinned `kane-civicmin` release chec
 The Civicmin installer:
 
 - supports Ubuntu 24.04 LTS for the portable-node baseline;
-- installs Webmin and Usermin from the official stable package channel when needed;
-- requires Usermin 2.550 or newer;
+- installs Webmin and Usermin from the official current stable package channel when needed, without pinning their versions;
+- requires Usermin 2.550 or newer as a compatibility floor, not a version pin;
 - installs the `civicmin` directory through Usermin's supported module installer;
 - is safe to run again to refresh the module from the same checkout;
 - does not configure, require, or consume email functionality.
@@ -167,7 +168,7 @@ Current triage:
 
 ## Immediate work
 
-`v0.5.0` begins with the portable Portal installer contract and root/no-argument `INSTALL/install.sh` entry point. The installer is deliberately limited to Webmin/Usermin/Civicmin installation and validation; it does not own LXD, Participant onboarding, network enrollment, certificates, mail configuration, or the Orchestrator.
+`v0.5.0` passed its portable-installation acceptance gate on the reference node. A clean one-command node install, Participant onboarding, Usermin login, Civicmin catalog/help, and the complete `water-ants` local-stub Publish File UI path all passed without changing Civic authority state. Webmin 2.670 and Usermin 2.570 were installed from upstream stable; the broker socket and access records remained intact; no mail transport was installed. The installer is deliberately limited to Webmin/Usermin/Civicmin installation and validation; it does not own LXD, Participant onboarding, network enrollment, certificates, mail configuration, or the Orchestrator.
 
 `v0.4.0` passed its acceptance gate with one bounded end-to-end local-stub form for `water-ants` / Publish File. The positive live path passed. The explicit-confirmation, missing-file, and oversized-payload negative paths also passed after UI hardening: Civicmin rejects them locally with participant-safe errors and no local source-path disclosure. The exact 262,144-byte ceiling also passed, while 262,145 bytes was rejected. For the 262,144-byte all-zero test artifact, the broker-returned SHA-256 matched the independently expected digest, confirming byte-for-byte payload fidelity through the Civicmin upload path. A participant-controlled filename containing HTML markup was rendered literally, confirming filename escaping in the result view. A selected zero-byte file also passed as a valid byte payload and was not confused with a missing upload. It does not expose a generic invocation endpoint.
 
