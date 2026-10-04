@@ -21,6 +21,7 @@ eval {
 if ($@) {
 	$run_error = $@;
 	$run_error =~ s/[\r\n]+/ /g;
+	$run_error =~ s/\s+at\s+.+?\s+line\s+\d+\.?\s*$//;
 	$run_error =~ s/\s+$//;
 	}
 

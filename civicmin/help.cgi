@@ -19,6 +19,7 @@ else {
 	if ($@) {
 		$help_error = $@;
 		$help_error =~ s/[\r\n]+/ /g;
+		$help_error =~ s/\s+at\s+.+?\s+line\s+\d+\.?\s*$//;
 		$help_error =~ s/\s+$//;
 		}
 	}

@@ -14,6 +14,7 @@ eval {
 if ($@) {
 	$catalog_error = $@;
 	$catalog_error =~ s/[\r\n]+/ /g;
+	$catalog_error =~ s/\s+at\s+.+?\s+line\s+\d+\.?\s*$//;
 	$catalog_error =~ s/\s+$//;
 	}
 

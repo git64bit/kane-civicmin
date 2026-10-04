@@ -143,7 +143,7 @@ Current triage:
 
 ## Immediate work
 
-The active `v0.4.0` milestone begins with one bounded end-to-end local-stub form for `water-ants` / Publish File. The live Kane reference test passed: Civicmin accepted uploaded bytes under the Participant process, required explicit acknowledgement in the UI, sent only those bytes through a hard-coded `water-ants` invocation frame to the existing local broker, and rendered the returned stub evidence. It does not expose a generic invocation endpoint.
+The active `v0.4.0` milestone begins with one bounded end-to-end local-stub form for `water-ants` / Publish File. The positive live path passed. The explicit-confirmation negative path also rejected correctly, but the first test exposed Perl source path/line metadata in the participant-facing error. Civicmin now strips caught Perl source-location suffixes before rendering errors; this narrow UI-hardening change must be revalidated. It does not expose a generic invocation endpoint.
 
 ```text
 Usermin login

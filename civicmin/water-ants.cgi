@@ -14,6 +14,7 @@ eval {
 if ($@) {
 	$form_error = $@;
 	$form_error =~ s/[\r\n]+/ /g;
+	$form_error =~ s/\s+at\s+.+?\s+line\s+\d+\.?\s*$//;
 	$form_error =~ s/\s+$//;
 	}
 
