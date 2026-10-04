@@ -40,14 +40,23 @@ elsif (!@{$catalog->{'commands'}}) {
 	}
 else {
 	foreach my $command (@{$catalog->{'commands'}}) {
+		my $raw_codename = $command->{'codename'} || "";
 		my $name = &html_escape($command->{'display_name'} || "");
-		my $codename = &html_escape($command->{'codename'} || "");
+		my $codename = &html_escape($raw_codename);
 		my $lifecycle = &html_escape($command->{'lifecycle'} || "");
 		my $summary = &html_escape($command->{'summary'} || "");
 		my $available = $command->{'available_to_run'} ?
 			$text{'catalog_yes'} : $text{'catalog_no'};
 
-		my $left = "<b>$name</b><br><tt>$codename</tt>";
+		my $left;
+		if ($raw_codename =~ /^[a-z]{1,5}-[a-z]{1,5}$/) {
+			$left = "<b><a href=\"help.cgi?codename=$raw_codename\">$name</a></b>".
+				"<br><tt>$codename</tt>";
+			}
+		else {
+			$left = "<b>$name</b><br><tt>$codename</tt>";
+			}
+
 		my $right = $summary."<br>".
 			$text{'catalog_lifecycle'}.": <tt>$lifecycle</tt><br>".
 			$text{'catalog_available'}.": ".$available;

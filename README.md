@@ -143,7 +143,7 @@ Current triage:
 
 ## Immediate work
 
-The active `v0.3.0` milestone is deliberately limited to command discovery. The live Kane reference test passed: Civicmin asks the existing local Custom Command broker for the commands discoverable to the current Participant and renders only the broker-returned catalog.
+The active `v0.3.0` milestone remains read-only. Catalog discovery has passed live validation. The next bounded slice adds catalog-to-help navigation using the broker's existing `help` request; it does not add invocation.
 
 ```text
 Usermin login

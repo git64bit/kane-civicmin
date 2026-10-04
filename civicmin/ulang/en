@@ -15,4 +15,11 @@ catalog_available=Available to run
 catalog_yes=Yes
 catalog_no=No
 
+help_title=Civicmin Command Guidance
+help_header=Command context
+help_command=Command
+help_guidance=Participant guidance
+help_invalid=Invalid Civic command identifier.
+help_return=Civicmin catalog
+
 index_return=Usermin home
