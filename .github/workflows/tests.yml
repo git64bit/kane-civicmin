@@ -1,0 +1,21 @@
+name: tests
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  install-contract:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check installer syntax
+        run: bash -n INSTALL/install.sh
+      - name: Check Usermin module package shape
+        run: |
+          tar -czf /tmp/kane-civicmin.ubm.gz civicmin
+          tar -tzf /tmp/kane-civicmin.ubm.gz | grep -qx 'civicmin/module.info'
+          grep -qx 'usermin=1' civicmin/module.info
+          grep -qx 'depends=2.550' civicmin/module.info
