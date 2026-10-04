@@ -136,7 +136,7 @@ Useful discoveries outside the active milestone may be noted briefly here with a
 
 Current triage:
 
-- **triage:** dedicated Civicmin top-level Usermin category and future separation of participant-facing and administrative surfaces. Keep Civicmin under Tools while functionality is the active priority;
+- **high triage:** dedicated top-level Usermin category `Civicmin`. Live `v0.3.0` use now shows real crowding under Tools and a growing semantic overlap between native Usermin account information and Civicmin participant context. Upstream Usermin supports operator-defined categories through its normal category-assignment mechanism, so this does not require an upstream patch. Keep Civicmin under Tools while functionality remains the active priority, but revisit this before the participant surface expands beyond the current catalog/help work;
 - **triage:** evaluate stock Custom Commands `display_mode=1` as a reference/fallback surface during later command-catalog work;
 - **deferred:** Webmin-side Civicmin administration beyond what is required to install and configure the Usermin module;
 - **deferred:** enterprise message-broker/federation integration, which belongs below the stable local Civic boundary.
