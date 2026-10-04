@@ -25,7 +25,7 @@ Civicmin is intended for independent Owner Operators. The Kane deployment is the
 
 ## Current state
 
-**Status:** `v0.5.0` accepted — release pending
+**Status:** `v0.5.0` released — portable Owner Operator packaging accepted live
 
 `v0.2.0` established the native Usermin shell, `v0.3.0` established the access-resolved read-only catalog/help path, and `v0.4.0` established the bounded `water-ants` / Publish File local-stub form. `v0.5.0` makes that accepted client installable as part of a portable Owner Operator node.
 
@@ -108,6 +108,7 @@ Accepted RFCs and BCPs are not silently rewritten when a later decision changes 
 
 - [RFC-0001 — Civicmin Scope and Thin-Client Boundary](rfcs/RFC-0001-civicmin-scope-and-thin-client-boundary.md)
 - [RFC-0002 — Mail Independence](rfcs/RFC-0002-mail-independence.md)
+- [RFC-0003 — Infrastructure, Not Service: Policy Boundary](rfcs/RFC-0003-infrastructure-not-service-policy-boundary.md)
 - [BCP-0001 — Release and Repository Practice](bcps/BCP-0001-release-and-repository-practice.md)
 - [BCP-0002 — Explicit Participant Confirmation and Voluntary Evidence](bcps/BCP-0002-explicit-participant-confirmation.md)
 - [BCP-0003 — Portable Portal Installation Contract](bcps/BCP-0003-portable-portal-installation-contract.md)
@@ -153,6 +154,14 @@ The Civicmin installer:
 
 Mail remains entirely an Owner Operator choice under RFC-0002.
 
+## Shared policy boundary
+
+RFC-0003 is recorded identically in `kane-civicmin` and `kane-orchestrator`.
+
+Civic Infrastructure provides mechanisms and does not restrict or replace upstream defaults. Owner Operators decide policy for shells, Usermin/Webmin modules, mail, quotas, SSH, firewalling, allow-lists, and exposure. Civic authority integrity remains fixed: kernel-derived Participant identity, default-deny Civic grants, protected credentials, authenticated Orchestrator ingress, and verifiable evidence.
+
+Installer exposure defaults are conservative starting mechanisms, not policy. The node installer publishes Usermin only and does not publish Webmin or other Portal administrative interfaces outside the node boundary.
+
 ## Capability triage
 
 Implementation does not widen scope merely because upstream Usermin/Webmin or Civic Infrastructure exposes additional capabilities.
@@ -168,7 +177,7 @@ Current triage:
 
 ## Immediate work
 
-`v0.5.0` passed its portable-installation acceptance gate on the reference node. A clean one-command node install, Participant onboarding, Usermin login, Civicmin catalog/help, and the complete `water-ants` local-stub Publish File UI path all passed without changing Civic authority state. Webmin 2.670 and Usermin 2.570 were installed from upstream stable; the broker socket and access records remained intact; no mail transport was installed. The installer is deliberately limited to Webmin/Usermin/Civicmin installation and validation; it does not own LXD, Participant onboarding, network enrollment, certificates, mail configuration, or the Orchestrator.
+`v0.5.0` is released and passed its portable-installation acceptance gate on the reference node. A clean one-command node install, Participant onboarding, Usermin login, Civicmin catalog/help, and the complete `water-ants` local-stub Publish File UI path all passed without changing Civic authority state. Webmin 2.670 and Usermin 2.570 were installed from upstream stable; the broker socket and access records remained intact; no mail transport was installed. The installer is deliberately limited to Webmin/Usermin/Civicmin installation and validation; it does not own LXD, Participant onboarding, network enrollment, certificates, mail configuration, or the Orchestrator.
 
 `v0.4.0` passed its acceptance gate with one bounded end-to-end local-stub form for `water-ants` / Publish File. The positive live path passed. The explicit-confirmation, missing-file, and oversized-payload negative paths also passed after UI hardening: Civicmin rejects them locally with participant-safe errors and no local source-path disclosure. The exact 262,144-byte ceiling also passed, while 262,145 bytes was rejected. For the 262,144-byte all-zero test artifact, the broker-returned SHA-256 matched the independently expected digest, confirming byte-for-byte payload fidelity through the Civicmin upload path. A participant-controlled filename containing HTML markup was rendered literally, confirming filename escaping in the result view. A selected zero-byte file also passed as a valid byte payload and was not confused with a missing upload. It does not expose a generic invocation endpoint.
 
