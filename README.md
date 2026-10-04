@@ -144,7 +144,7 @@ Current triage:
 
 ## Immediate work
 
-The active `v0.4.0` milestone begins with one bounded end-to-end local-stub form for `water-ants` / Publish File. The positive live path passed. The explicit-confirmation, missing-file, and oversized-payload negative paths also passed after UI hardening: Civicmin rejects them locally with participant-safe errors and no local source-path disclosure. The 262,144-byte ceiling is enforced before broker invocation. It does not expose a generic invocation endpoint.
+The active `v0.4.0` milestone begins with one bounded end-to-end local-stub form for `water-ants` / Publish File. The positive live path passed. The explicit-confirmation, missing-file, and oversized-payload negative paths also passed after UI hardening: Civicmin rejects them locally with participant-safe errors and no local source-path disclosure. The exact 262,144-byte ceiling also passed, while 262,145 bytes was rejected. For the 262,144-byte all-zero test artifact, the broker-returned SHA-256 matched the independently expected digest, confirming byte-for-byte payload fidelity through the Civicmin upload path. It does not expose a generic invocation endpoint.
 
 ```text
 Usermin login
