@@ -25,7 +25,7 @@ Civicmin is intended for independent Owner Operators. The Kane deployment is the
 
 ## Current state
 
-**Status:** `v0.4.0` development
+**Status:** `v0.4.0` accepted — release pending
 
 `v0.2.0` established the native Usermin shell and `v0.3.0` established the access-resolved read-only catalog/help path. Development has advanced to `v0.4.0`, beginning with one command-specific local-stub form for `water-ants` / Publish File. The form is deliberately not a generic form engine.
 
@@ -107,6 +107,7 @@ Accepted RFCs and BCPs are not silently rewritten when a later decision changes 
 ## Current authoritative records
 
 - [RFC-0001 — Civicmin Scope and Thin-Client Boundary](rfcs/RFC-0001-civicmin-scope-and-thin-client-boundary.md)
+- [RFC-0002 — Mail Independence](rfcs/RFC-0002-mail-independence.md)
 - [BCP-0001 — Release and Repository Practice](bcps/BCP-0001-release-and-repository-practice.md)
 - [BCP-0002 — Explicit Participant Confirmation and Voluntary Evidence](bcps/BCP-0002-explicit-participant-confirmation.md)
 
@@ -144,7 +145,7 @@ Current triage:
 
 ## Immediate work
 
-The active `v0.4.0` milestone begins with one bounded end-to-end local-stub form for `water-ants` / Publish File. The positive live path passed. The explicit-confirmation, missing-file, and oversized-payload negative paths also passed after UI hardening: Civicmin rejects them locally with participant-safe errors and no local source-path disclosure. The exact 262,144-byte ceiling also passed, while 262,145 bytes was rejected. For the 262,144-byte all-zero test artifact, the broker-returned SHA-256 matched the independently expected digest, confirming byte-for-byte payload fidelity through the Civicmin upload path. A participant-controlled filename containing HTML markup was rendered literally, confirming filename escaping in the result view. A selected zero-byte file also passed as a valid byte payload and was not confused with a missing upload. It does not expose a generic invocation endpoint.
+`v0.4.0` has passed its acceptance gate with one bounded end-to-end local-stub form for `water-ants` / Publish File. The positive live path passed. The explicit-confirmation, missing-file, and oversized-payload negative paths also passed after UI hardening: Civicmin rejects them locally with participant-safe errors and no local source-path disclosure. The exact 262,144-byte ceiling also passed, while 262,145 bytes was rejected. For the 262,144-byte all-zero test artifact, the broker-returned SHA-256 matched the independently expected digest, confirming byte-for-byte payload fidelity through the Civicmin upload path. A participant-controlled filename containing HTML markup was rendered literally, confirming filename escaping in the result view. A selected zero-byte file also passed as a valid byte payload and was not confused with a missing upload. It does not expose a generic invocation endpoint.
 
 ```text
 Usermin login
@@ -158,7 +159,7 @@ remote_dispatch=false
 side_effects=false
 ```
 
-`v0.3.0` is released. In the current `v0.4.0` slice, only `water-ants` can be submitted. The positive live path has passed on Usermin 2.550: the result rendered `status=stub`, fixed operation `publication.publish`, artifact SHA-256 and byte size, `remote_dispatch=Disabled`, and `External side effects=None`. The handler hard-codes the command identity and accepted semantic binding, enforces the existing 262,144-byte payload ceiling, requires explicit participant acknowledgement, and rejects any response that reports remote dispatch or external side effects.
+`v0.3.0` is released. In accepted `v0.4.0`, only `water-ants` can be submitted. The positive live path has passed on Usermin 2.550: the result rendered `status=stub`, fixed operation `publication.publish`, artifact SHA-256 and byte size, `remote_dispatch=Disabled`, and `External side effects=None`. The handler hard-codes the command identity and accepted semantic binding, enforces the existing 262,144-byte payload ceiling, requires explicit participant acknowledgement, and rejects any response that reports remote dispatch or external side effects.
 
 ## Future federation
 
